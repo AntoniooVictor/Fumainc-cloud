@@ -1,0 +1,12 @@
+{
+  "name": "fuma-agent-protocol",
+  "version": "1.0.0",
+  "description": "Autonomous Agent Deployment Protocol",
+  "scripts": {
+    "start": "docker-compose up -d",
+    "build": "docker build -t fuma-agent .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fuma Labs",
+  "license": "MIT"
+}

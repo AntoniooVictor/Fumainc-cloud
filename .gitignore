@@ -1,0 +1,6 @@
+.env
+internal/uploads/*
+!internal/uploads/.gitkeep
+.DS_Store
+node_modules/
+vendor/
