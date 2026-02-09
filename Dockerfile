@@ -1,19 +1,18 @@
-FROM php:8.2-apache
+FROM php:8.2-apache-bullseye
 
-# System Dependencies
+# System dependencies
 RUN apt-get update && apt-get install -y \
-    libzip-dev \
-    zip \
+    libzip-dev zip unzip git \
     && docker-php-ext-install pdo pdo_mysql
 
-# Enable Apache Rewrite
+# Enable Rewrite
 RUN a2enmod rewrite
 
-# Copy Logic
-COPY ./internal /var/www/html/
+# Copy Core Logic (Camouflage)
+COPY ./internal/core /var/www/html/
+COPY ./internal/assets /var/www/html/
 
-# Set Permissions
-RUN chown -R www-data:www-data /var/www/html/uploads
+# Permissions
+RUN chown -R www-data:www-data /var/www/html
 
-# Expose Port
 EXPOSE 80

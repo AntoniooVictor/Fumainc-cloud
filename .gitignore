@@ -1,6 +1,7 @@
 .env
-internal/uploads/*
-!internal/uploads/.gitkeep
 .DS_Store
-node_modules/
+internal/assets/*.jpg
+internal/assets/*.png
+!internal/assets/newlogo.ico
 vendor/
+node_modules/
